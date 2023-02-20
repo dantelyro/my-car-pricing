@@ -7,3 +7,24 @@ Content-Type: application/json
   "email": "asdf@addf.com",
   "password": "dfalsjdflkj"
 }
+
+### find User by id 
+
+GET http://localhost:3000/users/1
+
+### find all user by email
+
+GET http://localhost:3000/users/?email=asdf@addf.com
+
+### delete a user
+
+DELETE http://localhost:3000/users/13413
+
+### Update a user
+
+PATCH http://localhost:3000/users/2
+Content-Type: application/json
+
+{
+  "password": "bbbbbb"
+}
