@@ -11,8 +11,11 @@ import {
 import { User } from './dto/user.dto';
 import { UpdateUser } from './dto/update-user.dto';
 import { UsersService } from './users.service';
+import { Serialize } from 'src/interceptors/serialize.interceptor';
+import { ResponseUser } from './dto/response-user.dto';
 
 @Controller('users')
+@Serialize(ResponseUser)
 export class UsersController {
   constructor(private userService: UsersService) {}
 
